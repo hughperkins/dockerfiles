@@ -1,8 +1,9 @@
 FROM hughperkins/cltorch:latest
 
-RUN apt-get update -y && \
-    apt-get install -y cmake-curses-gui \
-                       clinfo
+RUN apt-get update && \
+    apt-get install -y \
+            cmake-curses-gui \
+            clinfo
 # RUN wget http://us.download.nvidia.com/XFree86/Linux-x86_64/352.55/NVIDIA-Linux-x86_64-352.55.run
 RUN wget http://us.download.nvidia.com/XFree86/Linux-x86_64/346.96/NVIDIA-Linux-x86_64-346.96.run
 RUN chmod +x NVIDIA-Linux-x86_64-3*.run 
